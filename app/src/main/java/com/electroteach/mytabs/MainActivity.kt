@@ -27,9 +27,13 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionButton = findViewById(R.id.fab)
         val current = LocalDateTime.now()
         val myInt = 17
-        val myString = "Some text from Mike $myInt"
+        val myString = "Some text from Mike $myInt " // + current
         fab.setOnClickListener { view ->
-            Snackbar.make(view, myString  , Snackbar.LENGTH_LONG)
+            Snackbar.make(
+                view,
+                myString  ,
+                Snackbar.LENGTH_LONG
+            )
                     .setAction("Action", null).show()
         }
     }
