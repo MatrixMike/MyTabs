@@ -28,12 +28,10 @@ class MainActivity : AppCompatActivity() {
         val current = LocalDateTime.now()
         val myInt = 17
         val myString = "Some text from Mike $myInt " // + current
+        val myString2 = String.format(" %tB ", current)
+        val formatted = String.format("Q %.2f   %.2f   %.2f ", 3.1, 3.2, 3.3)
         fab.setOnClickListener { view ->
-            Snackbar.make(
-                view,
-                myString  ,
-                Snackbar.LENGTH_LONG
-            )
+            Snackbar.make(view, myString + myString2 + formatted + current, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
     }
