@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.annotation.RequiresApi
 import com.electroteach.mytabs.ui.main.SectionsPagerAdapter
+import gearsOut
 import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val myString = "Some text from Mike $myInt " // + current
         val myString2 = String.format(" %tB ", current)
         val formatted = String.format("Q %.2f   %.2f   %.2f ", 3.1, 3.2, 3.3)
+        gearsOut ()
         fab.setOnClickListener { view ->
             Snackbar.make(view, myString + myString2 + formatted + current, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
