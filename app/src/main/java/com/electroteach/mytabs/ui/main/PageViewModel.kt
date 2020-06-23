@@ -7,6 +7,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import java.time.LocalDateTime
+import gearsOut
 
 class PageViewModel : ViewModel() {
     val exp1 = String.format("   ")
@@ -17,7 +18,7 @@ class PageViewModel : ViewModel() {
     }
     private val _index = MutableLiveData<Int>()
     val text: LiveData<String> = Transformations.map(_index) {
-        "Hello world from section: $it  " + currentPVM
+        "Hello world from section: $it  " + currentPVM +gearsOut()
     }
 
     fun setIndex(index: Int) {
