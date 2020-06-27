@@ -22,6 +22,6 @@ class PageViewModel : ViewModel() {
     }
 
     fun setIndex(index: Int) {
-        _index.value = index
+        _index.value = index		// seems to be called from PLaceholderFragment.kt
     }
 }
