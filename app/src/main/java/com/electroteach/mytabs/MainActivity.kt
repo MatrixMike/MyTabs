@@ -21,11 +21,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
+
+        val viewPager: ViewPager = findViewById(R.id.view_pager)	// find View by ID
         viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = findViewById(R.id.tabs)
+
+        val tabs: TabLayout = findViewById(R.id.tabs)			// find View by ID
         tabs.setupWithViewPager(viewPager)
-        val fab: FloatingActionButton = findViewById(R.id.fab)
+
+        val fab: FloatingActionButton = findViewById(R.id.fab)		// find View by ID
+
         val current = LocalDateTime.now()
         val myInt = 17
         val myString = "Some text from Mike $myInt " // + current
