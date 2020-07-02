@@ -15,7 +15,7 @@ import gearsOut
 import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
-
+// /home/mikeh/StudioProjects/MyTabs/app/build/outputs/apk/debug/
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
