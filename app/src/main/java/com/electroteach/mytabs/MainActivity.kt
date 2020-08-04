@@ -2,15 +2,13 @@ package com.electroteach.mytabs
 //  as seen by Red Pav win 8 : 18:44 21/07/2020
 import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.electroteach.mytabs.ui.main.SectionsPagerAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
-import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
-import androidx.annotation.RequiresApi
-import com.electroteach.mytabs.ui.main.SectionsPagerAdapter
 import gearsOut
 import java.time.LocalDateTime
 
@@ -37,7 +35,11 @@ class MainActivity : AppCompatActivity() {
         val formatted = String.format("Q %.2f   %.2f   %.2f ", 3.1, 3.2, 3.3)
         gearsOut ()
         fab.setOnClickListener { view ->
-            Snackbar.make(view, myString + myString2 + formatted + current + "*" , Snackbar.LENGTH_LONG)
+            Snackbar.make(
+                view,
+                myString + myString2 + formatted + current + "*" ,
+                Snackbar.LENGTH_LONG
+            )
                     .setAction("Action", null).show()
         }
     }
