@@ -37,7 +37,11 @@ class MainActivity : AppCompatActivity() {
         val formatted = String.format("Q %.2f   %.2f   %.2f ", 3.1, 3.2, 3.3)
         gearsOut ()
         fab.setOnClickListener { view ->
-            Snackbar.make(view, myString + myString2 + formatted + current + "*" , Snackbar.LENGTH_LONG)
+            Snackbar.make(
+                view,
+                "$myString$myString2$formatted$current*",
+                Snackbar.LENGTH_LONG
+            )
                     .setAction("Action", null).show()
         }
     }
