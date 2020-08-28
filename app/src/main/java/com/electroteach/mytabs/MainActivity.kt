@@ -14,6 +14,7 @@ import com.google.android.material.tabs.TabLayout
 import gearsOut
 import java.time.LocalDateTime
 import java.util.*
+import java.util.Locale.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,19 +32,21 @@ class MainActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)		// find View by ID
 
-        val current = LocalDateTime.now()
-        val dateFormat: DateFormat = SimpleDateFormat("hh.mm aa")
-        val dateString: String = dateFormat.format(Date()).toString()
-    //    println("Current time in AM/PM: $dateString")
+
         val myInt = 17
-        val myString = "Some text from Mike $myInt " // + current
-        val myString2 = String.format(" %tB ", current)
+//        val myString = "Some text from Mike $myInt " // + current
+//        val myString2 = String.format(" %tB ", current)
         val formatted = String.format("Q %.2f   %.2f   %.2f ", 3.1, 3.2, 3.3)
         gearsOut ()
         fab.setOnClickListener { view ->
+            val current = LocalDateTime.now()
+            val dateFormat: DateFormat = SimpleDateFormat("hh.mm aa")
+//        val dateFormat2: DateFormat = DateFormat.getTimeInstance("hh.mm aa",US)
+            val dateString: String = dateFormat.format(Date()).toString()
+            //    println("Current time in AM/PM: $dateString")
             Snackbar.make(
                 view,
-                "$myString$myString2$formatted* $dateString",
+                "$formatted* $dateString",
                 Snackbar.LENGTH_LONG
             )
                     .setAction("Action", null).show()
