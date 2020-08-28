@@ -1,18 +1,19 @@
 package com.electroteach.mytabs
 
+import android.icu.text.DateFormat
+import android.icu.text.SimpleDateFormat
 import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.electroteach.mytabs.ui.main.SectionsPagerAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
-import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
-import androidx.annotation.RequiresApi
-import com.electroteach.mytabs.ui.main.SectionsPagerAdapter
 import gearsOut
 import java.time.LocalDateTime
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionButton = findViewById(R.id.fab)		// find View by ID
 
         val current = LocalDateTime.now()
+        val dateFormat: DateFormat = SimpleDateFormat("hh.mm aa")
+        val dateString: String = dateFormat.format(Date()).toString()
+    //    println("Current time in AM/PM: $dateString")
         val myInt = 17
         val myString = "Some text from Mike $myInt " // + current
         val myString2 = String.format(" %tB ", current)
@@ -39,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(
                 view,
-                "$myString$myString2$formatted$current*",
+                "$myString$myString2$formatted* $dateString",
                 Snackbar.LENGTH_LONG
             )
                     .setAction("Action", null).show()
