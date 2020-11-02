@@ -27,7 +27,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     }
 
     override fun getPageTitle(position: KotlinInt): CharSequence? {
-        return context.resources.getString(TAB_TITLES[position] as KotlinInt)
+        return context.resources.getString(TAB_TITLES[position])
     }
 
     override fun getCount(): KotlinInt {
