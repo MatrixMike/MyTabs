@@ -8,17 +8,17 @@ import com.electroteach.mytabs.R
 import kotlin.Int as KotlinInt
 
 private val TAB_TITLES = arrayOf(
-        R.string.tab_text_1,
-        R.string.tab_text_2,
-        "Tab 3"
+    R.string.tab_text_1,
+    R.string.tab_text_2,
+    "Tab 3"
 )
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
-    : FragmentPagerAdapter(fm) {
+class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
+    FragmentPagerAdapter(fm) {
 
     override fun getItem(position: KotlinInt): Fragment {
         // getItem is called to instantiate the fragment for the given page.
