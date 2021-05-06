@@ -1,4 +1,4 @@
-package com.electroteach.mytabs.ui.main
+package consulting.hewittenterprises.gearstabs
 
 import android.os.Bundle
 import android.view.LayoutInflater

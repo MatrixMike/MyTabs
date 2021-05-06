@@ -1,4 +1,4 @@
-package com.electroteach.mytabs.ui.main
+package consulting.hewittenterprises.gearstabs
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

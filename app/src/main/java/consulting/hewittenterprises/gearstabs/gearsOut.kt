@@ -1,3 +1,5 @@
+package consulting.hewittenterprises.gearstabs
+
 fun gearsOut(): String {
 //	val gearsRatio = listOf(0.0)
     val gearsRatio: MutableList<Double> = mutableListOf()
@@ -15,7 +17,7 @@ fun gearsOut(): String {
     )  // number of teeth on gear is an integer
     for (f in frontGears) {
         for (r in rearGears) {
-            formatted = formatted + String.format("*%.2f   %.2f   %.2f   \n", f / r, f, r)
+            formatted += String.format("*%.2f   %.2f   %.2f   \n", f / r, f, r)
             gearsRatio.add(f / r)
         }
         println("next f")
@@ -24,7 +26,7 @@ fun gearsOut(): String {
     // now the sorted list
     gearsRatio
         .sortedBy { it }
-        .forEach { formatted = formatted + String.format("# %.2f  \n", it) }
+        .forEach { formatted += String.format("# %.2f  \n", it) }
 //	.forEach{ println("%6.2f  ".format(it))}
     return formatted
 }
